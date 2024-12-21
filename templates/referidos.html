@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lista de Referidos</title>
+</head>
+
+<body>
+    <h1>Referidos</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Contacto</th>
+            <th>Curso de Interés</th>
+            <th>Estado</th>
+        </tr>
+        {% for referido in referidos %}
+        <tr>
+            <td>{{ referido.id }}</td>
+            <td>{{ referido.nombre }}</td>
+            <td>{{ referido.contacto }}</td>
+            <td>{{ referido.curso_interes }}</td>
+            <td>{{ referido.estado }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Volver al Inicio</a>
+</body>
+
+</html>
