@@ -1,31 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Referidos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/referidos.css') }}">
 </head>
 
-<body>
-    <h1>Referidos</h1>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Contacto</th>
-            <th>Curso de Interés</th>
-            <th>Estado</th>
-        </tr>
-        {% for referido in referidos %}
-        <tr>
-            <td>{{ referido.id }}</td>
-            <td>{{ referido.nombre }}</td>
-            <td>{{ referido.contacto }}</td>
-            <td>{{ referido.curso_interes }}</td>
-            <td>{{ referido.estado }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-    <a href="/">Volver al Inicio</a>
+<body class="referidos-page">
+    <header>
+        <h1>Lista de Referidos</h1>
+    </header>
+
+    <main class="main-content">
+        <section class="referidos-table-container">
+            <table class="referidos-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Contacto</th>
+                        <th>Curso de Interés</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for referido in referidos %}
+                    <tr>
+                        <td>{{ referido.id }}</td>
+                        <td>{{ referido.nombre }}</td>
+                        <td>{{ referido.contacto }}</td>
+                        <td>{{ referido.curso_interes }}</td>
+                        <td>{{ referido.estado }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <a href="/" class="back-link">Volver al Inicio</a>
+    </main>
 </body>
 
 </html>

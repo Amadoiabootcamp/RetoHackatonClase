@@ -1,0 +1,118 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.dashboard-page header {
+    background-color: #007BFF;
+    /* Color azul moderno */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+/* Contenedor principal */
+.main-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Título de la sección */
+.section-title {
+    color: #007BFF;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos del dashboard-info */
+.dashboard-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dashboard-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.dashboard-item:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-item h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.dashboard-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Enlace de vuelta al inicio */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007BFF;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.back-link:hover {
+    color: #0056b3;
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+    .dashboard-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dashboard-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    .back-link {
+        font-size: 1.1em;
+    }
+}

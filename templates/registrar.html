@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Referido</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registrar.css') }}">
+</head>
+
+<body class="registrar-page">
+    <header>
+        <h1>Registrar Nuevo Referido</h1>
+    </header>
+
+    <main class="main-content">
+        <form action="/registrar" method="POST" class="form-registrar">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa el nombre del referido">
+            </div>
+
+            <div class="form-group">
+                <label for="contacto">Contacto:</label>
+                <input type="email" id="contacto" name="contacto" required placeholder="Ingresa el correo electrónico">
+            </div>
+
+            <div class="form-group">
+                <label for="curso_interes">Curso de Interés:</label>
+                <input type="text" id="curso_interes" name="curso_interes" required
+                    placeholder="Ingresa el curso de interés">
+            </div>
+
+            <button type="submit" class="submit-btn">Registrar</button>
+        </form>
+
+        <a href="/" class="back-link">Volver al Inicio</a>
+    </main>
+</body>
+
+</html>

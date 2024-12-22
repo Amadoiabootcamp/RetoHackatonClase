@@ -59,7 +59,17 @@ def registrar_referido():
 @app.route('/referidos', methods=['GET'])
 def listar_referidos():
     referidos = Referido.query.all()
-    return render_template('referidos.html', referidos=referidos)
+    result = [
+        {
+            'id': r.id,
+            'nombre': r.nombre,
+            'contacto': r.contacto,
+            'curso_interes': r.curso_interes,
+            'estado': r.estado,
+            'fecha_creacion': r.fecha_creacion
+        } for r in referidos
+    ]
+    return jsonify(result)
 
 
 @app.route('/referidos/<int:referido_id>', methods=['PUT'])
@@ -107,24 +117,9 @@ def dashboard():
         'conversiones': conversiones,
         'pendientes': pendientes
     }
-    return render_template('dashboard.html', report=report)
+    return jsonify(report)
 
 
-@app.route('/registrar', methods=['GET', 'POST'])
-def registrar():
-    if request.method == 'POST':
-        nombre = request.form['nombre']
-        contacto = request.form['contacto']
-        curso_interes = request.form['curso_interes']
-        referido = Referido(nombre=nombre, contacto=contacto,
-                            curso_interes=curso_interes)
-        db.session.add(referido)
-        db.session.commit()
-        return render_template('success.html', message="Referido registrado exitosamente.")
-    return render_template('registrar.html')
-
-
-# Inicialización de la base de datos
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

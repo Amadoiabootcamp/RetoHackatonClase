@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-    <title>Inicio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido al Sistema de Referidos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
 </head>
 
-<body>
-    <h1>Bienvenido al Sistema de Referidos</h1>
-    <a href="/referidos">Ver Referidos</a> | <a href="/dashboard">Ver Dashboard</a>
+<body class="inicio-page">
+    <header>
+        <h1>Bienvenido al Sistema de Referidos</h1>
+    </header>
+
+    <main class="main-content">
+        <nav class="nav-links">
+            <a href="/referidos" class="nav-link">Ver Referidos</a> |
+            <a href="/dashboard" class="nav-link">Ver Dashboard</a> |
+            <a href="/registrar" class="nav-link">Hacer Registros</a>
+        </nav>
+    </main>
 </body>
 
 </html>

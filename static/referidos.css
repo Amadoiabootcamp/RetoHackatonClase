@@ -1,0 +1,104 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.referidos-page header {
+    background-color: #007BFF;
+    /* Color azul moderno */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+/* Contenedor principal */
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Estilos de la tabla */
+.referidos-table-container {
+    overflow-x: auto;
+}
+
+.referidos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.referidos-table th,
+.referidos-table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.referidos-table th {
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.2em;
+}
+
+.referidos-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.referidos-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.referidos-table td {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Enlace de vuelta al inicio */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007BFF;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.back-link:hover {
+    color: #0056b3;
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .referidos-table th,
+    .referidos-table td {
+        font-size: 0.9em;
+        padding: 12px;
+    }
+
+    .back-link {
+        font-size: 1.1em;
+    }
+}

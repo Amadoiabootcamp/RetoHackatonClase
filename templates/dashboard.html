@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
 </head>
 
-<body>
-    <h1>Dashboard</h1>
-    <p>Total Referidos: {{ report.total_referidos }}</p>
-    <p>Conversiones: {{ report.conversiones }}</p>
-    <p>Pendientes: {{ report.pendientes }}</p>
-    <a href="/">Volver al Inicio</a>
+<body class="dashboard-page">
+    <header>
+        <h1>Dashboard</h1>
+    </header>
+
+    <main class="main-content">
+        <section class="dashboard-overview">
+            <h2 class="section-title">Resumen de Referidos</h2>
+            <div class="dashboard-info">
+                <div class="dashboard-item">
+                    <h3>Total Referidos</h3>
+                    <p class="dashboard-number">{{ report.total_referidos }}</p>
+                </div>
+                <div class="dashboard-item">
+                    <h3>Conversiones</h3>
+                    <p class="dashboard-number">{{ report.conversiones }}</p>
+                </div>
+                <div class="dashboard-item">
+                    <h3>Pendientes</h3>
+                    <p class="dashboard-number">{{ report.pendientes }}</p>
+                </div>
+            </div>
+        </section>
+
+        <a href="/" class="back-link">Volver al Inicio</a>
+    </main>
 </body>
 
 </html>
