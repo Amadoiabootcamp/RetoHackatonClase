@@ -122,7 +122,7 @@ def registrar_incentivos():
     return render_template('incentivos.html')
     
 @app.route('/registrar', methods=['GET', 'POST'])
-def registrar_referido():
+def registrar():
     if request.method == 'POST':
         nombre = request.form['nombre']
         contacto = request.form['contacto']
