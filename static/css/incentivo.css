@@ -9,7 +9,7 @@ body {
 
 /* Header */
 .incentivo-page header {
-    background-color: #28a745;
+    background-color: #007BFF;
     /* Verde atractivo */
     color: white;
     padding: 40px 0;
@@ -62,7 +62,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-    border-color: #28a745;
+    border-color: #007BFF;
     background-color: #fff;
     outline: none;
 }
@@ -71,7 +71,7 @@ textarea:focus {
 .submit-btn {
     padding: 15px;
     font-size: 1.2em;
-    background-color: #28a745;
+    background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;
@@ -80,7 +80,7 @@ textarea:focus {
 }
 
 .submit-btn:hover {
-    background-color: #218838;
+    background-color: #0056B3;
 }
 
 /* Estilo del enlace de vuelta al inicio */

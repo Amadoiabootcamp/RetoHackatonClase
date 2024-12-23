@@ -110,8 +110,19 @@ def dashboard():
     return render_template('dashboard.html', report=report)
 
 
+
+@app.route('/actualizar', methods=['GET'])
+def actualizar_referidos():
+
+    return render_template('referidos.html')
+
+@app.route('/incentivos', methods=['GET'])
+def registrar_incentivos():
+
+    return render_template('incentivos.html')
+    
 @app.route('/registrar', methods=['GET', 'POST'])
-def registrar():
+def registrar_referido():
     if request.method == 'POST':
         nombre = request.form['nombre']
         contacto = request.form['contacto']
@@ -122,9 +133,9 @@ def registrar():
         db.session.commit()
         return render_template('success.html', message="Referido registrado exitosamente.")
     return render_template('registrar.html')
+    
 
 
-# Inicialización de la base de datos
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
